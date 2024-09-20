@@ -1,0 +1,37 @@
+% ========================================= TEMPLATE INFO ========================================
+%
+% Author:       P4ntomime
+% Version:      1.0.0
+% Last updated: 2024-02-18
+% Brief:        A LaTeX template for summaries. See README.md for more information.
+% 
+% ================================================================================================
+\documentclass[8pt, a4paper, twoside]{extarticle}
+% Font size:    8pt
+% Paper size:   A4
+% style:        twoside (needed, so odd and even pages have different margins)
+% orientation:  portrait. (use 'landscape' for landscape orientation)
+
+
+% ========================================= DOCUMENT INFO =========================================
+\def\title{Leistungselektronik}           % title
+\def\shorttitle{} % short title (displayed as PDF title)
+\def\dozent{Dr. Jasmin Smajic}         % lecturer
+\def\semester{5. Semester}     % semester
+\def\author{Luca Loop}        % author(s)
+\def\repo{https://github.com/Luca-ET/LeistEl}             % repository link
+\def\version{1.0.\today}    % version
+\def\pagelimit{999}           % page limit -> causes pages after limit to be red
+\def\titleoption{compact}   % options: compact, normal
+\def\enableToC{true}
+
+% ================================= PACKAGES, SETUP AND COMMANDS ==================================
+\input{preamble.tex}
+
+
+% =========================================== DOCUMENT ============================================
+\begin{document}
+    \begin{layout}
+        \input{sections/01_einleitung.tex}
+    \end{layout}
+\end{document}
