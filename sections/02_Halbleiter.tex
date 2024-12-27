@@ -129,7 +129,8 @@ Die Diode schaltet nicht beim Nulldurchgang des Stromes ab, sondern führt einen
 
 \includegraphics[width=0.95\columnwidth]{images/V2B7.png}\\
 
-\subsubsection{Bipolarer Transistor: Wirkugsprinzip}
+\subsection{Bipolarer Transistor}
+\subsubsection{Wirkugsprinzip}
 
 \includegraphics[width=0.95\columnwidth]{images/V2B8.png}\\
 
@@ -144,25 +145,74 @@ Die Diode schaltet nicht beim Nulldurchgang des Stromes ab, sondern führt einen
 \end{minipage}
 \\
 
-\subsubsection{Bipolarer Transistor: Kennlinies}
+\subsubsection{Kennlinie}
 Im Verstärkungsbereich gilt:\\
-$\boxed{\beta = \frac{I_C}{I_B}}$\\
-\begin{tabular}{lll}
-    $\beta$ &=& Stromverstärkungsfaktor\\
-    $I_C$ &=& Kollektorstrom\\
-    $I_B$ &=& Basisstrom\\
-\end{tabular}
 
 
+\begin{minipage}[t]{0.49\columnwidth}
+    $\boxed{\beta = \frac{I_C}{I_B}}$\\
+    \begin{tabular}{lll}
+        $\beta$ &=& Stromverstärkungsfaktor\\
+        $I_C$ &=& Kollektorstrom\\
+        $I_B$ &=& Basisstrom\\
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B11.png}
+\end{minipage}
+\columnbreak
+
+\subsubsection{Schaltbetrieb}
+Als Leistungstransistoren im Schaltbetrieb werden überwiegend npn-Transistoren in der Emitter-Schaltung 
+verwendet.
+
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.75\columnwidth, align=t]{images/V2B13.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B12.png}
+\end{minipage}
+\\\\
+\textbf{Im Sättigungsbereich} ist der Basisstrom so gross, dass sich in der Basiszone mehr Ladungsträger 
+befinden als für den Kollektorstrom nötig ist. Deswegen ist $U_{BE}> U_{CE}$ und $U_{BC}>0$, d.h. die 
+beiden pn-Übergänge sind in die Durchlassrichtung polarisiert.\\
+
+\textbf{Im Schalterbetrieb} werden die Arbeitspunkte \textbf{I} (vorwärts sperrend) und \textbf{III} 
+(Durchlassbetrieb – Sättigung) verwendet.\\
+
+\subsubsection{Schaltbetrieb Kennwerte} 
+
+\begin{itemize}
+    \item \textbf{Die Kollektor-Emitter-Sperrspannung \( U_{CES} \):} \\
+    Der höchstzulässige Wert der Kollektor-Emittersperrspannung \( U_{CE} \) bei Ansteuerung mit einer 
+    negativen Basis-Emittersperrspannung \( U_{BE} \).\\
+
+    \item \textbf{Die Kollektor-Emitter-Sperrspannung \( U_{CE0} \):} \\
+    Der höchstzulässige Wert der Kollektor-Emittersperrspannung \( U_{CE} \) bei offenem Basisanschluss.\\
+
+    \item \textbf{Der Kollektor-Dauergrenzstrom \( I_{CAVM} \):} \\
+    Der höchstzulässige Wert des Gleichstrom-Mittelwerts bei vorgegebener Temperatur.\\
+
+    \item \textbf{Der periodische Kollektor-Spitzenstrom \( I_{CRM} \):} \\
+    Der höchstzulässige Wert eines Pulsstromes mit angegebener Periodendauer und definierter 
+    Einschaltdauer.\\
+\end{itemize}
+
+\subsubsection{Ein- und Ausschaltvorgang} 
+\includegraphics[width=0.95\columnwidth]{images/V2B14.png}
 
 
+\subsubsection{Bipolarer Transistor: Verluste im Schaltbetrieb} 8
+\begin{itemize}
+    \item Einschaltverluste
+    \item Ausschaltverluste
+    \item Durchlassverluste
+    \item Sperrverluste\\
+\end{itemize}
 
-
-
-
-
-
-
-
-
-
+\includegraphics[width=0.95\columnwidth]{images/V2B15.png}
