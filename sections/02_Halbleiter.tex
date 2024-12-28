@@ -216,3 +216,69 @@ beiden pn-Übergänge sind in die Durchlassrichtung polarisiert.\\
 \end{itemize}
 
 \includegraphics[width=0.95\columnwidth]{images/V2B15.png}
+\columnbreak
+
+\subsection{Andere Schaltelemente} 
+\subsubsection{Darlington-Transistoren}
+Der Stromverstärkungsfaktor der Leistungstransistoren ist relativ klein. Deswegen ist ein relativ starker Basisstrom für diese Transistoren notwendig. Um das Problem zu lösen, wird oft eine Darlington-Schaltung verwendet.
+
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.85\columnwidth, align=t]{images/V2B16.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.55\columnwidth, align=t]{images/V2B17.png}
+\end{minipage}
+\\
+
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \begin{align*}
+        \beta_1 &= \frac{i_{C1}}{i_{B1}}, \quad \beta_2 = \frac{i_{C2}}{i_{B2}} \\
+        i_{E1} &= i_{C1} + i_{B1} = (1 + \beta_1) i_{B1} \\
+        i_{B2} &= i_{E1} \\
+        i_{C2} &= \beta_2 i_{B2} = \beta_2 i_{E1} = \beta_2 (1 + \beta_1) i_{B1} = \beta_{\text{ges}} i_{B1} \\
+\end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    %\includegraphics[width=0.45\columnwidth, align=t]{images/V2B17.png}
+\end{minipage}
+\\
+$\boxed{\beta_{\text{ges}} = \beta_2 (1 + \beta_1) \approx \beta_1 \beta_2}$\\
+
+\subsubsection{IG-Feldeffekttransistor (MOSFET)}
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B18.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B19.png}
+\end{minipage}
+\\
+
+\begin{itemize}
+    \item Die elektrische Leitfähigkeit des Substrats ist durch ein elektrisches Feld gesteuert.
+    \item Das elektrische Feld ruft im Substrat elektrische \textbf{Influenzladungen} hervor.
+    \item S=Source, D=Drain, G=Gate, B=Bulk (Substrat)
+    \item Die Gate-Elektrode ist durch ein Metalloxid vom Substrat isoliert. Deshalb sind diese Transistoren als MOSFET (Metal-Oxid-Semiconductor) bekannt.
+\end{itemize}
+
+\includegraphics[width=0.95\columnwidth, align=t]{images/V2B20.png}\\
+
+\begin{itemize}
+    \item In praktischen Anwendungen wird die B-Elektrode mit der S-Elektrode direkt verbunden.
+    \item Zwischen den Elektroden D und S ist eine positive Spannung $U_{DS}$ angelegt. Damit ist der rechte pn-Übergang in die Sperrrichtung gepolt. Deswegen kann kein Strom in beiden Richtungen fließen und dieser Transistortyp ist deswegen auch als selbstsperrend bekannt.
+    \item \textcolor{red}{Sobald eine positive Spannung zwischen den Elektroden G und S angelegt ist, wird ein leitfähiger Elektronenkanal (n-Kanal) im Substrat entstanden und damit auch ein elektrischer Strom vom D- zum S-Anschluss.}
+\end{itemize}
+
+
+
+
+
+
