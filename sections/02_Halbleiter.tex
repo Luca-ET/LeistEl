@@ -250,6 +250,7 @@ Der Stromverstärkungsfaktor der Leistungstransistoren ist relativ klein. Desweg
 \\
 $\boxed{\beta_{\text{ges}} = \beta_2 (1 + \beta_1) \approx \beta_1 \beta_2}$\\
 
+
 \subsubsection{IG-Feldeffekttransistor (MOSFET)}
 \begin{minipage}[t]{0.49\columnwidth}
     \centering
@@ -293,8 +294,71 @@ $\boxed{\beta_{\text{ges}} = \beta_2 (1 + \beta_1) \approx \beta_1 \beta_2}$\\
 \begin{itemize}
     \item \textcolor{red}{Im ohmschen Bereich wird der Kanalquerschnitt mit der $U_{GS}$-Spannung kontrolliert. Dieser Bereich ist geeignet für elektrische Schalteranwendungen.}
 \end{itemize}
+\columnbreak
 
 
+\subsubsection{IG-Bipolar Transistor (IGBT)}
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B22.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B23.png}
+\end{minipage}\\
+
+\begin{minipage}[t]{0.49\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B24.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\columnwidth}
+    \begin{itemize}
+        \item Der IGBT setzt sich aus einem Bipolartransistor $T_2$ und einem MOSFET $T_1$ zusammen.
+        \item \textcolor{red}{n$^-$ ist eine schwach dotierte Zone, die zur Erhöhung der Spannungsfestigkeit des Transistors verwendet wird.}
+    \end{itemize}
+\end{minipage}\\
 
 
+\subsubsection{Transistoren im Vergleich}
 
+\begin{center}
+    \includegraphics[width=0.95\columnwidth]{images/V2B25.png}
+\end{center}
+
+
+\subsubsection{Thyristoren}
+
+\begin{itemize}
+    \item Thyristoren sind einschaltbare Bauelemente mit dem Haupteinsatzgebiet für Netzanwendungen.
+    \item Ein Thyristor besteht aus vier dünnen dotierten Halbleiterschichten, d.h. aus drei pn-Übergängen.
+\end{itemize}
+
+\begin{center}
+    \includegraphics[width=0.95\columnwidth]{images/V2B26.png}\\
+\end{center}
+
+\includegraphics[width=0.75\columnwidth]{images/V2B27.png}
+\columnbreak
+
+\textbf{\myul{Netzgeführte Schaltung}}\\
+\includegraphics[width=0.85\columnwidth, align=t]{images/V2B28.png}\\
+\textbf{\myul{Selbstgeführte Schaltung}}\\
+\includegraphics[width=0.85\columnwidth, align=t]{images/V2B29.png}\\
+
+
+\subsubsection{Abschaltbarer Thyristor (GTO = Gate-Turn-Off)}
+\includegraphics[width=0.95\columnwidth, align=t]{images/V2B30.png}\\\\
+
+\begin{minipage}[t]{0.19\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B31.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.79\columnwidth}
+    Der GTO schaltet aus, wenn ein ausreichend hoher negativer Gate-Strom auftritt.\\
+    Amplitude des Gate-Stromes muss 20\% bis 30\% des abzuschaltenden GTO-Stromes betragen.\\
+\end{minipage}\\
+
+\subsubsection{IGCT (Integrated Gate-Commutated Thyristor)}
