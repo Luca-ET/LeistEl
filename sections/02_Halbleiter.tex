@@ -1,4 +1,7 @@
 \section{Halbleiter}
+
+\includegraphics[width=0.95\columnwidth]{images/V2B34.png}
+
 \subsection{Diode}
 Eine Diode besteht aus einem pn-Übergang und ist deshalb ein nichtlineares Bauelement.\\
 
@@ -57,7 +60,7 @@ Eine Diode besteht aus einem pn-Übergang und ist deshalb ein nichtlineares Baue
             & & Strom in Durchlassrichtung\\
     $r_{F}$ &=& Differenzieller Widerstand\\
 \end{tabular}
-
+\columnbreak
 
 \subsubsection{Ersatzschaltbild Diode}
 
@@ -110,7 +113,6 @@ $\boxed{\cor{I_{F_{RMS}}} = \sqrt{\frac{1}{T} \int_0^T i^2_F(t) \, dt}}$\\
             & & Strom in Durchlassrichtung\\
     $r_{F}$ &=& Differenzieller Widerstand\\
 \end{tabular}
-\columnbreak
 
 \subsubsection{Schalverhalten und Schaltverluste}
 
@@ -162,7 +164,7 @@ Im Verstärkungsbereich gilt:\\
     \centering
     \includegraphics[width=0.95\columnwidth, align=t]{images/V2B11.png}
 \end{minipage}
-\columnbreak
+
 
 \subsubsection{Schaltbetrieb}
 Als Leistungstransistoren im Schaltbetrieb werden überwiegend npn-Transistoren in der Emitter-Schaltung 
@@ -184,6 +186,7 @@ beiden pn-Übergänge sind in die Durchlassrichtung polarisiert.\\
 
 \textbf{Im Schalterbetrieb} werden die Arbeitspunkte \textbf{I} (vorwärts sperrend) und \textbf{III} 
 (Durchlassbetrieb – Sättigung) verwendet.\\
+\columnbreak
 
 \subsubsection{Schaltbetrieb Kennwerte} 
 
@@ -343,9 +346,9 @@ $\boxed{\beta_{\text{ges}} = \beta_2 (1 + \beta_1) \approx \beta_1 \beta_2}$\\
 \columnbreak
 
 \textbf{\myul{Netzgeführte Schaltung}}\\
-\includegraphics[width=0.85\columnwidth, align=t]{images/V2B28.png}\\
+\includegraphics[width=0.95\columnwidth, align=t]{images/V2B28.png}\\
 \textbf{\myul{Selbstgeführte Schaltung}}\\
-\includegraphics[width=0.85\columnwidth, align=t]{images/V2B29.png}\\
+\includegraphics[width=0.95\columnwidth, align=t]{images/V2B29.png}\\
 
 
 \subsubsection{Abschaltbarer Thyristor (GTO = Gate-Turn-Off)}
@@ -362,3 +365,19 @@ $\boxed{\beta_{\text{ges}} = \beta_2 (1 + \beta_1) \approx \beta_1 \beta_2}$\\
 \end{minipage}\\
 
 \subsubsection{IGCT (Integrated Gate-Commutated Thyristor)}
+
+\begin{minipage}[t]{0.59\columnwidth}
+    \centering
+    \includegraphics[width=0.95\columnwidth, align=t]{images/V2B32.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.39\columnwidth}
+    \centering
+    \includegraphics[width=0.55\columnwidth, align=t]{images/V2B33.png}
+\end{minipage}\\
+
+\begin{itemize}
+    \item IGCT stellt hinsichtlich der Schaltleistung und Geschwindigkeit eine Weiterentwicklung des GTO dar.
+    \item Er wird hauptsächlich für Mittelspannungsumrichter eingesetzt.
+\end{itemize}
+
