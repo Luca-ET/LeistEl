@@ -1,0 +1,120 @@
+\section{Stromrichterschaltungen (Gleichrichter)}
+
+\subsection{Gruppierung nach Steuerung}
+\begin{enumerate}
+    \item \textbf{Ungesteuerter Stromrichter}:\\
+    Bei ungesteuerten Stromrichtern ist das Verhältnis von Eingangs- zu Ausgangsspannung durch die Stromrichterschaltung festgesetzt.
+    \item \textbf{Gesteuerter Stromrichter}:\\
+    Bei steuerbaren Stromrichtern kann das Verhältnis von Eingangs- zu Ausgangsspannung durch den Steuereingriff am Halbleiterschalter verändert werden.
+\end{enumerate}
+
+
+
+
+\subsection{Gruppierung nach Führung}
+\begin{enumerate}
+    \item \textbf{Netzgeführte Schaltungen}: Die Kommutierungsspannung des Stromrichters wird von dem Netzwerk entstanden.
+    \item \textbf{Lastgeführte Schaltungen}: Die Lastkreise (Synchronmotoren, Schwingkreise, usw.) liefern die Kommutierungsspannung.
+    \item \textbf{Selbstgeführte Schaltungen}: Eigene Schaltmittel des Stromrichters erzeugen die Kommutierungsspannung.
+\end{enumerate}
+
+\subsection{Kennzeichnung von Stromrichterschaltungen}
+Nach DIN IEC 971 ist die Kennzeichnung eine dreistellige Kombination:\\
+
+\myul{\textbf{Erste Ziffer:}}
+\begin{itemize}
+    \item \textbf{M}: Mittelpunktsschaltung
+    \item \textbf{B}: Brückenschaltung
+    \item \textbf{W}: Wechselwegschaltung\\
+\end{itemize}
+
+\myul{\textbf{Zweite Ziffer:}}
+\begin{itemize}
+    \item \textbf{Pulszahl p:}\\
+    Die Pulszahl ist die Anzahl der Kommutierungen eines Stromrichters innerhalb einer Netzperiode.\\
+\end{itemize}
+
+\myul{\textbf{Dritte Ziffer:}}
+\begin{itemize}
+    \item \textbf{U}: ungesteuerte Schaltung (Dioden)
+    \item \textbf{H}: halb gesteuerte Schaltung (Thyristoren für einen und Dioden für den anderen Zweig)
+    \item \textbf{C}: voll gesteuerte Schaltung (Thyristoren)\\
+\end{itemize}
+
+\newpage
+\subsection{Fourierreihe}
+\subsubsection{Fourierreihe als Zeitfunktion}
+
+$\boxed{
+    f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cdot \cos(2\pi f t \cdot k) + \sum_{k=1}^{\infty} b_k \cdot \cos(2\pi f t \cdot k)
+}$
+
+$\boxed{
+    a_0 = \frac{2}{T} \int_{0}^{T} u_R(t) \cdot dt
+}$
+
+$\boxed{
+    a_k = \frac{2}{T} \int_{0}^{T} u_R(t) \cdot \textcolor{red}{\cos ( 2\pi f t \cdot k )} \cdot dt
+}$
+
+$\boxed{
+    b_k = \frac{2}{T} \int_{0}^{T} u_R(t) \cdot \textcolor{green}{\sin ( 2\pi f t \cdot k )} \cdot dt
+}$
+
+\subsubsection{Fourierreihe als Winkelfunktion}
+
+$
+\boxed{
+    a_0 = \frac{1}{\pi} \int_{0}^{2\pi} u_R(\alpha) \cdot d\alpha
+}$
+
+$
+\boxed{
+    a_k = \frac{1}{\pi} \int_{0}^{2\pi} u_R(\alpha) \cdot \textcolor{red}{\cos ( \alpha \cdot k )} \cdot d\alpha
+}$
+
+$
+\boxed{
+    b_k = \frac{1}{\pi} \int_{0}^{2\pi} u_R(\alpha) \cdot \textcolor{green}{\sin ( \alpha \cdot k )} \cdot d\alpha
+}$
+
+$\boxed{
+    f(\alpha) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cdot \cos(\alpha \cdot k) + \sum_{k=1}^{\infty} b_k \cdot \cos(\alpha \cdot k)
+}$\\\\
+
+% Definiere das Symbol EINMAL vor beiden minipage-Umgebungen
+\newcommand{\stripedsquare}{%
+    \tikz {
+        \draw[black, line width=0.5pt] (0,0) rectangle (0.15,0.15);
+    }
+}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \subsubsection{Punktsymmetrisch}
+    \begin{mdframed}[linewidth=0.5pt, roundcorner=2pt]
+        \includegraphics[width=\columnwidth]{images/PDF/Punktsymmetrische_Funktion.pdf}
+    
+        \begin{itemize}[label=\stripedsquare]
+            \item alle $a_k = 0$
+            \item Keine \crd{cos()} Anteile
+            \item $f(-x) = -f(x)$
+        \end{itemize}
+    \end{mdframed}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \subsubsection{Achsensymmetrisch}
+    \begin{mdframed}[linewidth=0.5pt, roundcorner=2pt]
+        \includegraphics[width=\columnwidth]{images/PDF/Achsensymmetrische_Funktion.pdf}
+    
+        \begin{itemize}[label=\stripedsquare]
+            \item alle $b_k = 0$
+            \item Keine \cgn{sin()} Anteile
+            \item $f(-x) = f(x)$
+        \end{itemize}
+    \end{mdframed}
+\end{minipage}
+
+
+
+
