@@ -1,4 +1,3 @@
-# Importieren der benötigten Bibliotheken
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,8 +20,9 @@ a[idx_a1 | idx_a2] = a0 * np.sin(2 * np.pi * fn * t[idx_a1 | idx_a2])
 idx_b = (t > 0.005) & (t < 0.015)
 b[idx_b] = -6 * 10**3 * (t[idx_b] - 0.01)
 
-# %% Plot
-fig, ax = plt.subplots(num=1, clear=True, constrained_layout=True)
+# %% Plot Höhe reduziert
+fig, ax = plt.subplots(figsize=(8, 3), num=1, clear=True, constrained_layout=True)
+
 ax.plot(t, a, label='a (sinusförmig)', color='red')
 ax.plot(t, b, label='b (linear)', color='red')
 ax.grid(True)

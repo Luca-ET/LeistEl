@@ -46,17 +46,15 @@ Nach DIN IEC 971 ist die Kennzeichnung eine dreistellige Kombination:\\
 
 \newpage
 \subsection{Fourierreihe}
-
 % Definiere das Symbol EINMAL vor beiden minipage-Umgebungen
-\newcommand{\stripedsquare}{%
+\newcommand{\stripedsquare}{
     \tikz {
         \draw[black, line width=0.5pt] (0,0) rectangle (0.15,0.15);
     }
 }
-
 \begin{minipage}[t]{0.49\columnwidth}
     \subsubsection{Punktsymmetrisch}
-        \begin{tcolorbox}[colframe=black, colback=white, arc=3mm, boxrule=1pt]    
+        \begin{tcolorbox}[colframe=black, colback=white, arc=1mm, boxrule=1pt]    
             \includegraphics[width=\columnwidth]{images/PDF/Punktsymmetrische_Funktion.pdf}
             \begin{itemize}[label=\stripedsquare]
                 \item Keine \crd{cos()} Anteile
@@ -68,7 +66,7 @@ Nach DIN IEC 971 ist die Kennzeichnung eine dreistellige Kombination:\\
 \hfill
 \begin{minipage}[t]{0.49\columnwidth}
     \subsubsection{Achsensymmetrisch}
-        \begin{tcolorbox}[colframe=black, colback=white, arc=3mm, boxrule=1pt]  
+        \begin{tcolorbox}[colframe=black, colback=white, arc=1mm, boxrule=1pt]  
             \includegraphics[width=\columnwidth]{images/PDF/Achsensymmetrische_Funktion.pdf}  
             \begin{itemize}[label=\stripedsquare]
                 \item Keine \cgn{sin()} Anteile
@@ -81,7 +79,7 @@ Nach DIN IEC 971 ist die Kennzeichnung eine dreistellige Kombination:\\
 \subsubsection{Fourierreihe als Zeitfunktion}
 
 $\boxed{
-    f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cdot \cos(2\pi f t \cdot k) + \sum_{k=1}^{\infty} b_k \cdot \cos(2\pi f t \cdot k)
+    f(t) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cdot \textcolor{red}{\cos(2\pi f t \cdot k)} + \sum_{k=1}^{\infty} b_k \cdot \textcolor{green}{\sin(2\pi f t \cdot k)}
 }$
 
 $\boxed{
@@ -94,13 +92,13 @@ $\boxed{
 
 $\boxed{
     b_k = \frac{2}{T} \int_{0}^{T} u_R(t) \cdot \textcolor{green}{\sin ( 2\pi f t \cdot k )} \cdot dt
-}$
+}$\\
 
 
 \subsubsection{Fourierreihe als Winkelfunktion}
 
 $\boxed{
-    f(\alpha) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cdot \cos(\alpha \cdot k) + \sum_{k=1}^{\infty} b_k \cdot \cos(\alpha \cdot k)
+    f(\alpha) = \frac{a_0}{2} + \sum_{k=1}^{\infty} a_k \cdot \textcolor{red}{\cos(\alpha \cdot k)} + \sum_{k=1}^{\infty} b_k \cdot \textcolor{green}{\sin(\alpha \cdot k)}
 }$
 
 $\boxed{
@@ -113,10 +111,37 @@ $\boxed{
 
 $\boxed{
     b_k = \frac{1}{\pi} \int_{0}^{2\pi} u_R(\alpha) \cdot \textcolor{green}{\sin ( \alpha \cdot k )} \cdot d\alpha
-}$
+}$\\
 
-\subsection{Fourierreihe im TR}
 
+\subsection{Fourierreihen, Wichtige Schritte}
+
+\subsubsection{Transformation in Winkeldarstellung}
+
+$\boxed{\alpha = \omega t = 2\pi f t = \frac{2\pi t}{T}} \Leftrightarrow \boxed{t = \frac{\alpha}{2\pi f} = \frac{\alpha T}{2\pi}}$
+
+
+\subsubsection{Differential berechnen}
+$\boxed{dt = dt \cdot \frac{d\alpha}{d\alpha} 
+= \frac{d\textcolor{blue}{t}}{d\alpha} \cdot d\alpha 
+= \frac{d}{d\alpha} \left( \textcolor{blue}{\frac{\alpha}{2\pi f}} \right) \cdot d\alpha 
+= \frac{1}{2\pi f} \cdot d\alpha 
+= \frac{T}{2\pi} \cdot d\alpha}$\\
+
+$\boxed{dt = \frac{T}{2\pi} \cdot d\alpha}$\\
+
+\subsubsection{Integrationsgrenzen berechnen}
+
+Hier muss $t_x$ jeweils als Winkel ausgedrückt eingesetzt werden!\\
+
+$\boxed{\alpha_x = 2\pi f \cdot t_x = \frac{2\pi \cdot t_x}{T} = \dots}$\\
+
+
+
+
+\newcolumn
+\subsection{Fourierreihe im TR Beispiel 1}
+\includegraphics[width=\columnwidth]{images/PDF/LeistEl_Beispiel_1.pdf}
 
 
 
